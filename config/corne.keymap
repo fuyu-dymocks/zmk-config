@@ -52,7 +52,7 @@
             display-name = "Button";
             bindings = <
 &none  &kp K_UNDO  &kp LS(DEL)  &kp LC(INS)  &kp LS(INS)  &kp K_AGAIN    &kp K_AGAIN  &kp LS(INS)  &kp LC(INS)  &kp LS(DEL)  &kp K_UNDO  &none
-&none  &kp LGUI    &kp LALT     &kp LCTRL    &kp LSHFT    &none          &none        &kp LSHFT    &kp LCTRL    &kp LALT     &kp LGUI    &none
+&none  &u_sk LGUI  &u_sk LALT   &u_sk LCTRL  &u_sk LSHFT  &none          &none        &u_sk LSHFT  &u_sk LCTRL  &u_sk LALT   &u_sk LGUI  &none
 &none  &kp K_UNDO  &kp LS(DEL)  &kp LC(INS)  &kp LS(INS)  &kp K_AGAIN    &kp K_AGAIN  &kp LS(INS)  &kp LC(INS)  &kp LS(DEL)  &kp K_UNDO  &none
                                 &mkp MB3     &mkp MB1     &mkp MB2       &mkp MB2     &mkp MB1     &mkp MB3
             >;
@@ -71,20 +71,20 @@
         MEDIA {
             display-name = "Media";
             bindings = <
-&none  &none     &none     &none      &none      &none    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF    &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &none
-&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &kp C_PREV       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT       &none            &none
-&none  &none     &kp RALT  &none      &none      &none    &u_out_tog       &u_bt_sel_0        &u_bt_sel_1      &u_bt_sel_2      &u_bt_sel_3      &none
-                           &none      &none      &none    &kp C_STOP       &kp C_PP           &kp C_MUTE
+&none  &none       &none       &none        &none        &none    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF    &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &none
+&none  &u_sk LGUI  &u_sk LALT  &u_sk LCTRL  &u_sk LSHFT  &none    &kp C_PREV       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT       &none            &none
+&none  &none       &kp RALT    &none        &none        &none    &u_out_tog       &u_bt_sel_0        &u_bt_sel_1      &u_bt_sel_2      &u_bt_sel_3      &none
+                               &none        &none        &none    &kp C_STOP       &kp C_PP           &kp C_MUTE
             >;
         };
 
         NUM {
             display-name = "Num";
             bindings = <
-&none  &kp SLASH  &kp N7  &kp N8      &kp N9  &kp ASTERISK    &none  &none      &none      &none     &none     &none
-&none  &none      &kp N4  &kp N5      &kp N6  &kp MINUS       &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
-&none  &kp GRAVE  &kp N1  &kp N2      &kp N3  &kp PLUS        &none  &none      &none      &kp RALT  &none     &none
-                          &kp PERIOD  &kp N0  &kp EQUAL       &none  &none      &none
+&none  &kp SLASH  &kp N7  &kp N8      &kp N9  &kp ASTERISK    &none  &none        &none        &none       &none       &none
+&none  &none      &kp N4  &kp N5      &kp N6  &kp MINUS       &none  &u_sk LSHFT  &u_sk LCTRL  &u_sk LALT  &u_sk LGUI  &none
+&none  &kp GRAVE  &kp N1  &kp N2      &kp N3  &kp PLUS        &none  &none        &none        &kp RALT    &none       &none
+                          &kp PERIOD  &kp N0  &kp EQUAL       &none  &none        &none
             >;
         };
 
@@ -99,7 +99,7 @@
 
         PROG {
             bindings = <
-&none  &kp LEFT_BRACKET  &kp LESS_THAN         &kp EQUAL      &kp GREATER_THAN       &kp RIGHT_BRACKET    &none  &none              &none                &none            &none            &none
+&none  &kp LEFT_BRACKET  &kp LESS_THAN         &kp EQUAL      &kp GREATER_THAN       &kp RIGHT_BRACKET    &none  &kp HASH           &kp DOLLAR           &kp CARET        &none            &none
 &none  &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp COLON      &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE      &none  &u_sk RIGHT_SHIFT  &u_sk RIGHT_CONTROL  &u_sk RIGHT_ALT  &u_sk RIGHT_GUI  &none
 &none  &kp EXCLAMATION   &kp ASTERISK          &kp AMPERSAND  &kp SLASH              &kp PIPE             &none  &none              &none                &none            &none            &none
                                                &kp MINUS      &kp UNDERSCORE         &kp PLUS             &none  &none              &none
@@ -108,10 +108,10 @@
 
         FUN {
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK    &trans  &trans  &trans  &trans  &trans  &trans
-                         &trans  &trans  &trans             &trans  &trans  &trans
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN    &trans  &trans             &trans               &trans           &trans           &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK     &trans  &u_sk RIGHT_SHIFT  &u_sk RIGHT_CONTROL  &u_sk RIGHT_ALT  &u_sk RIGHT_GUI  &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK    &trans  &trans             &trans               &trans           &trans           &trans
+                         &trans  &trans  &trans             &trans  &trans             &trans
             >;
         };
     };
