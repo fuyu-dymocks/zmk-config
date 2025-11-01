@@ -28,6 +28,11 @@
             layers = <0>;
             require-prior-idle-ms = <50>;
         };
+
+        func {
+            bindings = <&to 7>;
+            key-positions = <37 40>;
+        };
     };
 
     keymap {
@@ -76,10 +81,28 @@
         NUM {
             display-name = "Num";
             bindings = <
-&none  &kp EQUAL     &kp N7  &kp N8      &kp N9  &kp PLUS     &none  &none      &none      &none     &none     &none
-&none  &kp ASTERISK  &kp N4  &kp N5      &kp N6  &kp MINUS    &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
-&none  &kp GRAVE     &kp N1  &kp N2      &kp N3  &kp FSLH     &none  &none      &none      &kp RALT  &none     &none
-                             &kp PERIOD  &kp N0  &kp EQUAL    &none  &none      &none
+&none  &kp SLASH  &kp N7  &kp N8      &kp N9  &kp ASTERISK    &none  &none      &none      &none     &none     &none
+&none  &none      &kp N4  &kp N5      &kp N6  &kp MINUS       &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
+&none  &kp GRAVE  &kp N1  &kp N2      &kp N3  &kp PLUS        &none  &none      &none      &kp RALT  &none     &none
+                          &kp PERIOD  &kp N0  &kp EQUAL       &none  &none      &none
+            >;
+        };
+
+        SYM {
+            bindings = <
+&trans  &kp QUESTION  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &trans            &trans  &trans             &trans               &trans           &trans           &trans
+&trans  &trans        &kp DOLLAR       &kp PERCENT   &kp LCTRL             &kp UNDERSCORE    &trans  &u_sk RIGHT_SHIFT  &u_sk RIGHT_CONTROL  &u_sk RIGHT_ALT  &u_sk RIGHT_GUI  &trans
+&trans  &kp TILDE     &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp EQUAL         &trans  &trans             &trans               &trans           &trans           &trans
+                                       &trans        &trans                &trans            &trans  &trans             &trans
+            >;
+        };
+
+        PROG {
+            bindings = <
+&none  &kp LEFT_BRACKET  &kp LESS_THAN         &kp EQUAL      &kp GREATER_THAN       &kp RIGHT_BRACKET    &none  &none              &none                &none            &none            &none
+&none  &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp COLON      &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE      &none  &u_sk RIGHT_SHIFT  &u_sk RIGHT_CONTROL  &u_sk RIGHT_ALT  &u_sk RIGHT_GUI  &none
+&none  &kp EXCLAMATION   &kp ASTERISK          &kp AMPERSAND  &kp SLASH              &kp PIPE             &none  &none              &none                &none            &none            &none
+                                               &kp MINUS      &kp UNDERSCORE         &kp PLUS             &none  &none              &none
             >;
         };
 
@@ -89,15 +112,6 @@
 &trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK    &trans  &trans  &trans  &trans  &trans  &trans
                          &trans  &trans  &trans             &trans  &trans  &trans
-            >;
-        };
-
-        PROG {
-            bindings = <
-&none  &kp LEFT_BRACKET  &kp LESS_THAN         &kp EQUAL  &kp GREATER_THAN       &kp RIGHT_BRACKET    &none  &none  &none  &none  &none  &none
-&none  &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp COLON  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE      &none  &none  &none  &none  &none  &none
-&none  &kp EXCLAMATION   &kp AMPERSAND         &kp MINUS  &none                  &kp PERCENT          &none  &none  &none  &none  &none  &none
-                                               &kp MINUS  &kp UNDERSCORE         &kp PLUS             &none  &none  &none
             >;
         };
     };
