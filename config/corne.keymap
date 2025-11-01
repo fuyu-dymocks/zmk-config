@@ -36,10 +36,10 @@
         BASE {
             display-name = "Base";
             bindings = <
-&none  &kp Q  &kp W  &kp F           &kp P          &kp B          &kp J          &kp L         &kp U        &kp Y    &kp APOS  &none
-&none  &kp A  &kp R  &kp S           &kp T          &kp G          &kp M          &kp N         &kp E        &kp I    &kp O     &none
-&to 1  &kp Z  &kp X  &kp C           &kp D          &kp V          &kp K          &kp H         &kp COMMA    &kp DOT  &kp FSLH  &to 1
-                     &kp LEFT_SHIFT  &u_lt 2 SPACE  &u_lt 3 TAB    &u_lt 5 ENTER  &u_lt 4 BSPC  &u_lt 6 DEL
+&none  &kp Q      &kp W  &kp F           &kp P          &kp B          &kp J          &kp L         &kp U        &kp Y    &kp APOS       &none
+&none  &kp A      &kp R  &kp S           &kp T          &kp G          &kp M          &kp N         &kp E        &kp I    &kp O          &none
+&none  &u_lt 1 Z  &kp X  &kp C           &kp D          &kp V          &kp K          &kp H         &kp COMMA    &kp DOT  &u_lt 1 SLASH  &none
+                         &kp LEFT_SHIFT  &u_lt 2 SPACE  &u_lt 3 TAB    &u_lt 6 ENTER  &u_lt 4 BSPC  &u_lt 5 DEL
             >;
         };
 
@@ -76,30 +76,28 @@
         NUM {
             display-name = "Num";
             bindings = <
-&kp GRAVE  &kp N1        &kp N2    &kp N3     &kp N4     &kp N5       &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &none
-&kp SEMI   &kp LEFT_WIN  &kp LALT  &kp LCTRL  &kp LSHFT  &kp EQUAL    &kp PLUS   &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &kp COLON
-&none      &none         &none     &none      &none      &kp MINUS    &kp UNDER  &none      &none      &kp RALT  &none     &none
-                                   &none      &none      &kp MINUS    &none      &none      &none
-            >;
-        };
-
-        SYM {
-            display-name = "Sym";
-            bindings = <
-&kp TILDE  &kp EXCL      &kp AT    &kp HASH   &kp DLLR        &kp CARET               &kp AMPS               &kp ASTRK  &kp LPAR   &kp RPAR  &kp UNDER  &kp PLUS
-&none      &kp LEFT_GUI  &kp LALT  &kp LCTRL  &kp LSHFT       &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI   &none
-&none      &none         &none     &none      &kp LEFT_BRACE  &kp LEFT_BRACKET        &kp RBKT               &kp RBRC   &none      &kp RALT  &none      &none
-                                   &kp LPAR   &kp RPAR        &kp UNDER               &none                  &none      &none
+&none  &kp EQUAL     &kp N7  &kp N8      &kp N9  &kp PLUS     &none  &none      &none      &none     &none     &none
+&none  &kp ASTERISK  &kp N4  &kp N5      &kp N6  &kp MINUS    &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
+&none  &kp GRAVE     &kp N1  &kp N2      &kp N3  &kp FSLH     &none  &none      &none      &kp RALT  &none     &none
+                             &kp PERIOD  &kp N0  &kp EQUAL    &none  &none      &none
             >;
         };
 
         FUN {
-            display-name = "Fun";
             bindings = <
-&kp F1  &kp F2    &kp F3    &kp F4     &kp F5     &kp F6             &kp F7          &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
-&none   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp PRINTSCREEN    &kp SCROLLLOCK  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
-&none   &none     &none     &none      &none      &kp PAUSE_BREAK    &none           &none      &none      &kp RALT  &none     &none
-                            &kp K_APP  &kp SPACE  &kp TAB            &none           &none      &none
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK    &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans  &trans  &trans             &trans  &trans  &trans
+            >;
+        };
+
+        PROG {
+            bindings = <
+&none  &kp LEFT_BRACKET  &kp LESS_THAN         &kp EQUAL  &kp GREATER_THAN       &kp RIGHT_BRACKET    &none  &none  &none  &none  &none  &none
+&none  &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp COLON  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE      &none  &none  &none  &none  &none  &none
+&none  &kp EXCLAMATION   &kp AMPERSAND         &kp MINUS  &none                  &kp PERCENT          &none  &none  &none  &none  &none  &none
+                                               &kp MINUS  &kp UNDERSCORE         &kp PLUS             &none  &none  &none
             >;
         };
     };
