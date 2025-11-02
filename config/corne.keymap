@@ -346,7 +346,13 @@
         mo_func: mo_func {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mo 7 &kp F24>;
+            bindings =
+                <&macro_press>,
+                <&mo 7 &kp F24>,
+                <&macro_pause_for_release>,
+                <&mo 7>,
+                <&macro_release>;
+
             label = "MO_FUNC";
         };
     };
@@ -376,7 +382,7 @@
             bindings = <&sk>;
             #binding-cells = <1>;
             ignore-modifiers;
-            release-after-ms = <10000>;
+            release-after-ms = <20000>;
         };
     };
 };
