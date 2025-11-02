@@ -30,7 +30,7 @@
         };
 
         func {
-            bindings = <&to 7>;
+            bindings = <&mo_func>;
             key-positions = <37 40>;
         };
     };
@@ -341,6 +341,13 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             bindings = <&kp KP_ASTERISK &kp KP_N5>;
+        };
+
+        mo_func: mo_func {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mo 7 &kp F24>;
+            label = "MO_FUNC";
         };
     };
 };
