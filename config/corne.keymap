@@ -343,11 +343,16 @@
             bindings = <&kp KP_ASTERISK &kp KP_N5>;
         };
 
-        mo_func: mo_func {
+        mo_func: cancel_queued_os_mods_and_toggle_func {
+            label = "MO_FUNC";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mo 7 &kp F24>;
-            label = "MO_FUNC";
+            bindings
+                = <&macro_press &mo 7>
+                , <&macro_tap &kp F24>
+                , <&macro_pause_for_release>
+                , <&macro_release &mo 7>
+                ;
         };
     };
 };
