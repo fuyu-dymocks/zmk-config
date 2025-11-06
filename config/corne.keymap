@@ -20,18 +20,25 @@
         delete {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <9 10>;
+            layers = <0>;
         };
 
         escape {
             bindings = <&kp ESC>;
             key-positions = <1 2>;
-            layers = <0>;
+            layers = <0 3>;
             require-prior-idle-ms = <50>;
         };
 
         func {
             bindings = <&mo_func>;
             key-positions = <37 40>;
+        };
+
+        mac_del {
+            bindings = <&kp LA(BACKSPACE)>;
+            key-positions = <9 10>;
+            layers = <1>;
         };
     };
 
@@ -43,9 +50,20 @@
             bindings = <
 &none  &kp Q      &kp W  &kp F           &kp P          &kp B          &kp J          &kp L         &kp U        &kp Y    &kp APOS       &none
 &none  &kp A      &kp R  &kp S           &kp T          &kp G          &kp M          &kp N         &kp E        &kp I    &kp O          &none
-&none  &u_lt 2 Z  &kp X  &kp C           &kp D          &kp V          &kp K          &kp H         &kp COMMA    &kp DOT  &u_lt 2 SLASH  &none
-                         &kp LEFT_SHIFT  &u_lt 3 SPACE  &u_lt 4 TAB    &u_lt 7 ENTER  &u_lt 5 BSPC  &u_lt 6 DEL
+&none  &u_lt 3 Z  &kp X  &kp C           &kp D          &kp V          &kp K          &kp H         &kp COMMA    &kp DOT  &u_lt 3 SLASH  &none
+                         &kp LEFT_SHIFT  &u_lt 4 SPACE  &u_lt 5 TAB    &u_lt 8 ENTER  &u_lt 6 BSPC  &u_lt 7 DEL
             >;
+        };
+
+        MacBase {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "MAC";
         };
 
         Extra {
@@ -53,8 +71,8 @@
             bindings = <
 &none  &kp Q      &kp W  &kp E           &kp R          &kp T          &kp Y          &kp U         &kp I        &kp O    &kp P          &none
 &none  &kp A      &kp S  &kp D           &kp F          &kp G          &kp H          &kp J         &kp K        &kp L    &kp SEMI       &none
-&none  &u_lt 2 Z  &kp X  &kp C           &kp V          &kp B          &kp N          &kp M         &kp COMMA    &kp DOT  &u_lt 2 SLASH  &none
-                         &kp LEFT_SHIFT  &u_lt 3 SPACE  &u_lt 4 TAB    &u_lt 7 ENTER  &u_lt 5 BSPC  &u_lt 6 DEL
+&none  &u_lt 3 Z  &kp X  &kp C           &kp V          &kp B          &kp N          &kp M         &kp COMMA    &kp DOT  &u_lt 3 SLASH  &none
+                         &kp LEFT_SHIFT  &u_lt 4 SPACE  &u_lt 5 TAB    &u_lt 8 ENTER  &u_lt 6 BSPC  &u_lt 7 DEL
             >;
         };
 
@@ -122,7 +140,7 @@
 
         FUN {
             bindings = <
-&bootloader  &kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN    &none  &to 0              &to 1                &none            &none            &none
+&bootloader  &kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN    &none  &to 0              &to 2                &none            &none            &none
 &none        &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK     &none  &u_sk RIGHT_SHIFT  &u_sk RIGHT_CONTROL  &u_sk RIGHT_ALT  &u_sk RIGHT_GUI  &none
 &none        &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK    &none  &none              &none                &none            &none            &none
                               &none   &none   &none              &none  &none              &none
@@ -185,7 +203,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
-            bindings = <&bt BT_SEL 2 &bt BT_CLR>;
+            bindings = <&bt BT_SEL 2 &bt BT_CLR &kp>;
         };
     };
 };
@@ -359,12 +377,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 8>,
+                <&mo 9>,
                 <&macro_tap>,
                 <&kp F24>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 8>;
+                <&mo 9>;
         };
     };
 };
