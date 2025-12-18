@@ -118,7 +118,7 @@
 &trans  &trans  &trans  &trans  &trans    &trans  &trans                    &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans    &trans  &trans                    &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans    &trans  &trans                    &trans  &trans  &trans
-                        &trans  &trans    &to 5   &mt LEFT_SHIFT BACKSPACE
+                        &trans  &trans    &mo 5   &mt LEFT_SHIFT BACKSPACE
             >;
         };
 
