@@ -41,12 +41,13 @@
         backspace {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <9 8>;
-            layers = <0>;
+            layers = <1>;
         };
 
         escape {
             bindings = <&kp ESCAPE>;
             key-positions = <1 0>;
+            layers = <0 1>;
         };
 
         nosticky {
@@ -75,12 +76,24 @@
         MACDEL {
             bindings = <&kp LA(BACKSPACE)>;
             key-positions = <8 9>;
-            layers = <1>;
+            layers = <0>;
         };
 
         reset {
             bindings = <&sys_reset>;
             key-positions = <0 30>;
+        };
+
+        grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <0 1>;
+            layers = <2>;
+        };
+
+        tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <0 1>;
+            layers = <3>;
         };
     };
 
@@ -103,7 +116,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        Mac-Def {
             display-name = "Default Layer";
             bindings = <
 &kp Q  &kp W  &kp F  &kp P        &kp B        &kp J  &kp L                &kp U      &kp Y    &kp APOS
@@ -113,7 +126,7 @@
             >;
         };
 
-        MACDEF {
+        Win-Def {
             bindings = <
 &trans  &trans  &trans  &trans  &trans    &trans  &trans                    &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans    &trans  &trans                    &trans  &trans  &trans
@@ -125,20 +138,20 @@
         left_layer {
             display-name = "Left Layer";
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN   &kp HASH          &kp DOLLAR      &kp PRCNT    &kp CARET       &kp AMPS              &kp ASTERISK           &kp EQUAL         &kp PLUS
-&sk LEFT_GUI     &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &kp EQUAL    &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE   &kp SEMICOLON
-&kp GRAVE        &trans        &trans            &to 0           &to 1        &kp LESS_THAN   &kp LBKT              &kp RBKT               &kp GREATER_THAN  &kp BACKSLASH
-                                                 &none           &none        &kp MINUS       &kp UNDERSCORE
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp N4          &kp N5       &kp N6          &kp N7                &kp N8                 &kp N9            &kp N0
+&sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &kp EQUAL    &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE   &kp SEMICOLON
+&kp GRAVE     &trans        &trans            &to 0           &to 1        &kp LESS_THAN   &kp LBKT              &kp RBKT               &kp GREATER_THAN  &kp BACKSLASH
+                                              &none           &none        &kp MINUS       &kp UNDERSCORE
             >;
         };
 
         right_layer {
             display-name = "Right Layer";
             bindings = <
-&kp N1        &kp N2        &kp N3            &kp N4          &kp N5    &kp N6     &kp N7         &kp N8       &kp N9     &kp N0
-&sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &trans    &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &kp COLON
-&kp TILDE     &kp K_CUT     &kp K_COPY        &kp K_PASTE     &trans    &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp PIPE
-                                              &none           &none     &kp ENTER  &kp EQUAL
+&kp EXCLAMATION  &kp AT_SIGN   &kp HASH          &kp DOLLAR      &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp EQUAL  &kp PLUS
+&sk LEFT_GUI     &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &trans         &kp LEFT   &kp DOWN       &kp UP        &kp RIGHT  &kp COLON
+&kp TILDE        &kp K_CUT     &kp K_COPY        &kp K_PASTE     &trans         &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &kp PIPE
+                                                 &none           &none          &kp ENTER  &kp EQUAL
             >;
         };
 
