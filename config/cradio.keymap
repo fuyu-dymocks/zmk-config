@@ -58,6 +58,7 @@
         capsword {
             bindings = <&caps_word>;
             key-positions = <13 16>;
+            require-prior-idle-ms = <500>;
         };
 
         bootloader {
